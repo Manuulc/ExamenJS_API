@@ -1,0 +1,84 @@
+ENTIDADES :
+			
+			- clsPersona :
+					- int idPersona, idDepartamento
+					- string nombre, apellidos, telefono, direccion, foto
+					- DateTime fechaNacimiento
+
+			- clsDepartamento :
+					- int idDepartamento
+					- string nombreDepartamento
+					
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DAL :
+
+	- Carpeta Conexion :
+			- clsMyConnection :
+					- public SqlConnection getConnection ()
+					- public void closeConnection (ref SqlConnection connection)
+
+	- Carpeta ListadosDAL :
+			- clsListadoPersonasDAL :
+					- public static List<clsPersona> ObtenerListadoPersonasDAL()
+
+			- clsListadoDepartamentosDAL :
+					- public static List<clsDepartamento> ObtenerListadoDepartamentosDAL()
+
+	- Carpeta ManejadorasDAL :
+			- clsManejadoraPersonasDAL :
+					- public static int ActualizarPersona (clsPersona persona)
+					
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+BL
+
+	- Carpeta ListadosBL :
+			- clsListadoPersonasBL :
+					- public static List<clsPersona> ObtenerListadoPersonasBL()
+
+			- clsListadoDepartamentosBL :
+					- public static List<clsDepartamento> ObtenerListadoDepartamentosBL()
+
+	- Carpeta ManejadorasBL :
+			- clsManejadoraPersonasBL :
+					- public static int ActualizarPersona (clsPersona persona)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+API Controller
+
+	- PersonasController
+		- verbo get()
+		- verbo put (clsPersona persona)
+
+	- DepartamentosController
+		- verbo get()
+
+	
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+wwwroot
+
+	- Carpeta Html
+		- index.html
+
+	- Carpeta Js
+		- index.js
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- Examen.js
+
+	- Clase Persona(){}
+	- array personas y departamentos
+	- InicializaEventos()
+	- ObtenerPersonasAPI()
+	- ObtenerDepartamentosAPI()
+	- LlenarTabla()
+	- ActualizarPersonas()
+
+
